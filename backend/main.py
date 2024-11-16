@@ -5,13 +5,20 @@ import os
 from random import choice
 
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 
 from bank_gen import fetch_bank_data
 from invest_data import predict_potential_stock_mix
 
 app = Flask(__name__)
+
+# Allow all origins
+# CORS(app, resources={r"/*": {"origins": "*"}})
+
 basedir = os.path.abspath(os.path.dirname(__file__))
 API_POST_URL = "https://fantastic-capybara-g4w9xx544wh5j4-5000.app.github.dev/"
+
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.post("/bank")
 def get_bank_data() -> str:
