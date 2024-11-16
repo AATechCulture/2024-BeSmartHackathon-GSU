@@ -12,7 +12,7 @@ def generate_bank_data(add=False):
     bank_data = {}
     for _ in range(100):
         iin = randint(100000, 999999)
-        salary = randint(3000, 100000)
+        salary = randint(3000, 20000)
         shopping = randint(percent(salary, 3, 9), percent(salary))
         groceries = randint(percent(salary, 3, 9), percent(salary))
         gas = randint(percent(salary, 3, 9), percent(salary))
@@ -60,7 +60,7 @@ def get_extra_monies() -> list[int]:
         json.dump(extra_monies, file)
 
 if __name__ == "__main__":
-    # generate_bank_data()
-    # verify_bank_data()
+    generate_bank_data()
+    verify_bank_data()
     get_extra_monies()
     # print(x)
