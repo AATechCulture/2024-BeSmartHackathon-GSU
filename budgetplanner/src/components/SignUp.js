@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState } from "react"; 
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "../styles/login.css";
 
 function Login() {
@@ -9,6 +10,7 @@ function Login() {
 
   const [greeting, setGreeting] = useState(""); // To store the greeting
   const [error, setError] = useState(""); // To handle errors
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -39,6 +41,11 @@ function Login() {
       const iin = data.iin;
       localStorage.iin = iin;
       setGreeting(`Hi, ${username}!`);
+
+      // Wait for 2 seconds and redirect to the investment page
+      setTimeout(() => {
+        navigate("/investment");
+      }, 2000);
     } catch (error) {
       console.error("Error during login:", error);
       setError(error.message || "An unexpected error occurred.");
