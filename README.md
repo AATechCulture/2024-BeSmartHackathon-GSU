@@ -41,16 +41,16 @@ _______________
 **...point us to your PPT or Canva slides 😍**
 
 ### Team Checklist ✅
-- [ x] Team photo
-- [ x] Team Slack channel
-- [ x] Communication established with mentor
-- [x ] Repo creation from this template
-- [x ] Hangar registration
+- [x] Team photo
+- [x] Team Slack channel
+- [x] Communication established with mentor
+- [x] Repo creation from this template
+- [x] Hangar registration
 
 ### Project Checklist 🏁
-- [ ] Presentation complete and linked
-- [ ] [Video pitch recorded and linked] (https://youtu.be/36ub3SMs5Mo)
-- [ ] Code merged to main branch
+- [x] [Presentation complete and linked] (https://www.canva.com/design/DAGWqLD6mNg/qZFUqgR0Z_qPGpBwJW4Okw/view?utm_content=DAGWqLD6mNg&utm_campaign=designshare&utm_medium=link&utm_source=editor)
+- [x] [Video pitch recorded and linked] (https://youtu.be/36ub3SMs5Mo)
+- [x] Code merged to main branch
 
 ### School Name 🏫
 **Grambling State University**
