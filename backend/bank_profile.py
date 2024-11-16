@@ -4,7 +4,6 @@ import json
 
 from random import randint, sample
 
-import requests as req
 
 def generate_names():
     """Generates names"""
