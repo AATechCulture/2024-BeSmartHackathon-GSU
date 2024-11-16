@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Neutral text color */
+    background-color: #f9f9f9; /* Light background */
+  }
+  
+  .landing-page {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #4caf50, #81c784); /* Vibrant green gradient */
+    padding: 50px 10%;
+    text-align: left;
+    color: white;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    margin: 0 0 20px;
+    color: #ffffff;
+  }
+  
+  .hero-content p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+  }
+  
+  .hero-buttons button {
+    margin-right: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #ffffff;
+    background-color: #388e3c; /* Rich green */
+    transition: background 0.3s;
+  }
+  
+  .hero-buttons button:hover {
+    background-color: #2e7d32; /* Darker green for hover */
+  }
+  
+  .hero-image img {
+    width: 500px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Adds depth to the image */
+  }
+  
+  /* Features Section */
+  .features {
+    padding: 50px 10%;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .features h2 {
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    color: #2e7d32; /* Professional green */
+  }
+  
+  .feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: #f0f8f0; /* Light greenish-white */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card h3 {
+    font-size: 1.6rem;
+    color: #388e3c; /* Dark green for card titles */
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #555555;
+    margin-top: 10px;
+    line-height: 1.6;
+  }
+  
+  /* Call-to-Action Section */
+  .cta {
+    background-color: #4caf50; /* Vibrant green */
+    color: white;
+    text-align: center;
+    padding: 50px 10%;
+  }
+  
+  .cta h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #e8f5e9; /* Lightened text */
+  }
+  
+  .cta button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #388e3c; /* Rich green */
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .cta button:hover {
+    background-color: #2e7d32; /* Dark green for hover */
+  }
+  
+  
+  
