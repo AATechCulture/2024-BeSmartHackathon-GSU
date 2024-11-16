@@ -54,9 +54,6 @@ function Login() {
               type="email"
               id="email"
               name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              required
             />
           </div>
           <div className="form-group">
