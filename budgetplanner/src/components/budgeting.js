@@ -1,31 +1,111 @@
-import React, { useState } from "react";
-import "../styles/budgetingPage.css";
+import React, { useState, useEffect } from "react";
 import { Pie } from "react-chartjs-2"; // Importing chart for visualization
 import "chart.js/auto"; // Automatically register required chart components
+import "../styles/budgetingPage.css";
 
 function BudgetingPage() {
-  const [monthlyIncome, setMonthlyIncome] = useState("");
-  const [monthlyExpenses, setMonthlyExpenses] = useState("");
-  const [savingsGoal, setSavingsGoal] = useState("");
-  const [expenseData, setExpenseData] = useState([
-    { category: "Rent", amount: 0 },
-    { category: "Groceries", amount: 0 },
-    { category: "Utilities", amount: 0 },
-  ]);
+  const [budgetData, setBudgetData] = useState(null); // State for budget data from API
+  const [recommendations, setRecommendations] = useState([]); // State for recommendations
+  const [loading, setLoading] = useState(true); // Loading state for initial data
+  const [loadingRecommendations, setLoadingRecommendations] = useState(false); // Loading state for recommendations
+  const [error, setError] = useState(null); // Error state
 
-  const handleAddExpense = (e) => {
-    e.preventDefault();
-    const newExpense = {
-      category: e.target.category.value,
-      amount: parseFloat(e.target.amount.value),
+  // Fetch budget details
+  useEffect(() => {
+    const fetchBudgetData = async () => {
+      try {
+        const response = await fetch(
+          "https://fantastic-capybara-g4w9xx544wh5j4-5000.app.github.dev/bank", // Replace with your API endpoint
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ iin: localStorage.iin }),
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch budget details");
+        }
+
+        const data = await response.json(); // Parse the API response
+        setBudgetData(data); // Set the budget data
+
+        // Trigger fetching recommendations after budget details are loaded
+        setLoadingRecommendations(true);
+        fetchRecommendations();
+      } catch (error) {
+        setError(error.message); // Set the error message
+      } finally {
+        setLoading(false); // End the loading state for budget details
+      }
     };
-    setExpenseData([...expenseData, newExpense]);
-    e.target.reset();
+
+    fetchBudgetData();
+  }, []);
+
+  // Fetch recommendations after budget details are loaded
+  const fetchRecommendations = async () => {
+    try {
+      const response = await fetch(
+        "https://fictional-sniffle-x76pxj954xr355j-5000.app.github.dev/budget", // Replace with your API endpoint
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ iin: localStorage.iin }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch budget recommendations");
+      }
+
+      const data = await response.json(); // Parse the API response
+      setRecommendations(data); // Set recommendations
+    } catch (error) {
+      setError(error.message); // Handle any errors
+    } finally {
+      setLoadingRecommendations(false); // End the loading state for recommendations
+    }
   };
 
-  const totalExpenses = expenseData.reduce((total, item) => total + item.amount, 0);
-  const remainingBudget = monthlyIncome - totalExpenses - savingsGoal;
+  if (loading) {
+    return (
+      <div className="budgeting-page">
+        <h1>Fetching Bank Details...</h1>
+      </div>
+    );
+  }
 
+  if (error) {
+    return (
+      <div className="budgeting-page">
+        <h1>Error: {error}</h1>
+      </div>
+    );
+  }
+
+  // Extract values from API data
+  const { salary, shopping, groceries, gas, bills } = budgetData || {};
+
+  // Expense categories and amounts
+  const expenseData = [
+    { category: "Shopping", amount: shopping || 0 },
+    { category: "Groceries", amount: groceries || 0 },
+    { category: "Gas", amount: gas || 0 },
+    { category: "Bills", amount: bills || 0 },
+  ];
+
+  // Total Expenses
+  const totalExpenses = expenseData.reduce((total, item) => total + item.amount, 0);
+
+  // Remaining Budget
+  const remainingBudget = salary - totalExpenses;
+
+  // Data for Pie Chart
   const pieChartData = {
     labels: expenseData.map((expense) => expense.category),
     datasets: [
@@ -42,59 +122,13 @@ function BudgetingPage() {
       {/* Hero Section */}
       <header className="budget-hero">
         <div className="hero-content">
-          <h1>Create a Personalized Budget</h1>
+          <h1>Personalized Budget Overview</h1>
           <p>
-            Input your expenses, savings goals, and investment preferences to get
-            a tailored budget plan.
+            View your expenses, savings, and remaining budget based on your bank
+            details.
           </p>
         </div>
       </header>
-
-      {/* Expense Input Form */}
-      <section className="expense-input">
-        <h2>Input Your Monthly Details</h2>
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-          }}
-        >
-          <div className="form-group">
-            <label htmlFor="monthlyIncome">Monthly Income ($)</label>
-            <input
-              type="number"
-              id="monthlyIncome"
-              value={monthlyIncome}
-              onChange={(e) => setMonthlyIncome(parseFloat(e.target.value) || "")}
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="savingsGoal">Savings Goal ($)</label>
-            <input
-              type="number"
-              id="savingsGoal"
-              value={savingsGoal}
-              onChange={(e) => setSavingsGoal(parseFloat(e.target.value) || "")}
-              required
-            />
-          </div>
-        </form>
-
-        <form onSubmit={handleAddExpense}>
-          <div className="form-group">
-            <label htmlFor="category">Expense Category</label>
-            <input type="text" id="category" name="category" placeholder="e.g., Rent" required />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="amount">Amount ($)</label>
-            <input type="number" id="amount" name="amount" placeholder="e.g., 500" required />
-          </div>
-
-          <button type="submit">Add Expense</button>
-        </form>
-      </section>
 
       {/* Budget Overview */}
       <section className="graphs-section">
@@ -107,13 +141,10 @@ function BudgetingPage() {
           <div className="graph">
             <h3>Budget Summary</h3>
             <p>
-              <strong>Total Income:</strong> ${monthlyIncome || 0}
+              <strong>Total Income (Salary):</strong> ${salary || 0}
             </p>
             <p>
               <strong>Total Expenses:</strong> ${totalExpenses}
-            </p>
-            <p>
-              <strong>Savings Goal:</strong> ${savingsGoal || 0}
             </p>
             <p>
               <strong>Remaining Budget:</strong>{" "}
@@ -127,6 +158,25 @@ function BudgetingPage() {
             </p>
           </div>
         </div>
+      </section>
+{/* Budget Recommendations */}
+      <section className="recommendations-section">
+        {loadingRecommendations ? (
+          <h2>Generating Budget Recommendations...</h2>
+        ) : (
+          <>
+            <h2>Budget Recommendations</h2>
+            <div className="recommendations-container">
+              {recommendations.map((rec, index) => (
+                <div key={index} className="recommendation-card">
+                  {/* Example icons (replace with relevant ones) */}
+                  <div className="recommendation-icon">💡</div>
+                  <p className="recommendation-text">{rec}</p>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
       </section>
     </div>
   );

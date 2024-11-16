@@ -21,7 +21,7 @@ function Login() {
 
     try {
       const response = await fetch(
-        "https://fantastic-capybara-g4w9xx544wh5j4-5000.app.github.dev/profile/",
+        "https://fantastic-capybara-g4w9xx544wh5j4-5000.app.github.dev/profile",
         {
           method: "POST",
           headers: {
@@ -35,7 +35,9 @@ function Login() {
       }
 
       const data = await response.json();
-      const username = data.fullName || "Guest"; // Extract username or use "Guest"
+      const username = data.full_name || "Guest"; // Extract username or use "Guest"
+      const iin = data.iin;
+      localStorage.iin = iin;
       setGreeting(`Hi, ${username}!`);
     } catch (error) {
       console.error("Error during login:", error);
