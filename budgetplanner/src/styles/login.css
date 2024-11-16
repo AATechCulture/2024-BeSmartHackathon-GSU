@@ -92,8 +92,27 @@ body {
     text-decoration: underline;
     transition: color 0.3s ease;
   }
-  
+
   .toggle-text:hover {
     color: #4caf50; /* Green on hover */
+  }
+
+
+  .user-info {
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #333;
+  }
+
+  .error-text {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .greeting {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4caf50; /* Green to indicate success */
   }
   
