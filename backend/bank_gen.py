@@ -11,7 +11,7 @@ def generate_bank_data(add=False):
     bank_data = {}
     for _ in range(100):
         iin = randint(100000, 999999)
-        salary = randint(3000, 100000) + 200
+        salary = randint(3000, 100000)
         shopping = randint(percent(salary, 3, 9), percent(salary))
         groceries = randint(percent(salary, 3, 9), percent(salary))
         gas = randint(percent(salary, 3, 9), percent(salary))
@@ -24,8 +24,24 @@ def generate_bank_data(add=False):
             "bills": bills
         }
 
+
     with open("bank_data.json", 'r' if add else 'w', encoding="utf-8") as file:
         json.dump(bank_data, file)
 
+def verify_bank_data():
+    """Verifies bank data"""
+    with open("bank_data.json", 'r', encoding="utf-8") as file:
+        bank_data = json.load(file)
+
+    count = 0
+    for iin, data in bank_data.items():
+        # print the salary and the sum
+        if sum(data.values())-data["salary"] > data["salary"]:
+            print(f"Error: IIN: {iin} has a category that is greater than the salary")
+            count += 1
+    print(f"Total errors: {count}")
+
+
 if __name__ == "__main__":
     generate_bank_data()
+    verify_bank_data()
