@@ -56,11 +56,12 @@ def get_extra_monies() -> list[int]:
     with open("bank_data.json", 'r', encoding="utf-8") as file:
         bank_data = json.load(file)
     with open("extra_monies.json", 'w', encoding="utf-8") as file:
-        extra_monies = [2*data["salary"] - sum(data.values()) for data in bank_data.values()]
+        extra_monies = {iin: 2*data["salary"] - sum(data.values()) for iin, data in bank_data.items()}
         json.dump(extra_monies, file)
 
 if __name__ == "__main__":
-    generate_bank_data()
-    verify_bank_data()
-    get_extra_monies()
+    # generate_bank_data()
+    # verify_bank_data()
+    # get_extra_monies()
     # print(x)
+    pass
