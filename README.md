@@ -11,9 +11,7 @@ _______________
 ## Challenge Statement(s) Addressed 🎯
 **Many 18-35 year olds lack the essential financial knowledge and skills to effectively manage their money, budget wisely, and make informed investment choices, hindering their ability to achieve financial stability and reach their goals.**
 
-Examples:
-* How might we decrease the United States chances of alien and monster attacks given what we know from popular alien and monster movies?
-* How might we ....
+
 
 ## Project Description 🤯
 **sAIve is your all-in-one AI-powered financial companion. It automatically creates personalized budgets, tracks your spending habits, and provides smart investment recommendations tailored to your goals.  Say goodbye to financial stress and hello to financial freedom**
@@ -25,13 +23,13 @@ Examples:
 **The application leverages a combination of natural language processing, machine learning and statistical analysis to provide personalized financial planning and budgetting. Built in python, the app uses transformers for NLP, specifically a zero-shot classification.**
 
 **Full list of technoclogies:**
-Examples: 
-*Hugging Face
-*REACT
-*Node.js
-*Java
-*Python
-*Command-Line
+
+**Hugging Face**
+**REACT**
+**Node.js**
+**Java**
+**Python**
+**Command-Line**
 
 
 
