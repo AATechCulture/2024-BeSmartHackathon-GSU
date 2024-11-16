@@ -19,11 +19,12 @@ def get_bank_data() -> str:
     return jsonify(bank_data)
 
 
-@app.get("/user")
+@app.post("/user")
 def get_user_data() -> str:
     """Returns user data"""
+    iin = request.get_json()["iin"]
     # return the user data
-    with open(os.path.join(basedir, "user_data.json"), 'r', encoding="utf-8") as file:
-        user_data = json.load(file)
-    return jsonify(user_data)
+    with open(os.path.join(basedir, "user_details.json"), 'r', encoding="utf-8") as file:
+        users_data = json.load(file)
+    return jsonify(users_data[iin])
 # app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(basedir, "db.sqlite")
