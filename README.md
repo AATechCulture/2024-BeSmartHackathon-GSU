@@ -25,7 +25,7 @@ Examples:
 **The application leverages a combination of natural language processing, machine learning and statistical analysis to provide personalized financial planning and budgetting. Built in python, the app uses transformers for NLP, specifically a zero-shot classification.**
 
 **Full list of technoclogies:**
-
+Examples: 
 *Hugging Face
 *REACT
 *Node.js
