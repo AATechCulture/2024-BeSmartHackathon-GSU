@@ -4,10 +4,13 @@ import json
 import os
 
 from flask import Flask, request, jsonify
+from flask_cors import CORS
+
 from budget_assigner import generate_budget_recommendations, generate_user_data
 
 
 app = Flask(__name__)
+CORS(app)
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 # make a route for the bank data
