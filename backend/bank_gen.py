@@ -47,7 +47,7 @@ def fetch_data(iin: str) -> dict:
     """Fetches bank data"""
     # using requests to fetch the data of a bank iin
     response = req.post(
-       "https://fantastic-capybara-g4w9xx544wh5j4-5000.app.github.dev/bank", json={"iin": iin})
+       "https://fantastic-capybara-g4w9xx544wh5j4-5000.app.github.dev/bank", json={"iin": iin}, timeout=10)
     print(response)
     return response.json()
 
