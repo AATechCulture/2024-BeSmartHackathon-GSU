@@ -2,6 +2,8 @@
 import json
 from random import randint
 
+import requests as req  # type: ignore
+
 def percent(salary, start=10, end=25):
     """Returns a random percentage of the salary"""
     return int((randint(start, end)/100) * salary)
@@ -41,7 +43,17 @@ def verify_bank_data():
             count += 1
     print(f"Total errors: {count}")
 
+def fetch_data(iin: str) -> dict:
+    """Fetches bank data"""
+    # using requests to fetch the data of a bank iin
+    response = req.post(
+       "https://fantastic-capybara-g4w9xx544wh5j4-5000.app.github.dev/bank", json={"iin": iin})
+    print(response)
+    return response.json()
+
 
 if __name__ == "__main__":
-    generate_bank_data()
-    verify_bank_data()
+    # generate_bank_data()
+    # verify_bank_data()
+    x = fetch_data("834682")
+    print(x)
