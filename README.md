@@ -24,11 +24,11 @@ _______________
 
 **Full list of technoclogies:**
 
-**Hugging Face**
-**REACT**
-**Node.js**
-**Java**
-**Python**
+**Hugging Face,**
+**REACT,**
+**Node.js,**
+**Java,**
+**Python,**
 **Command-Line**
 
 
@@ -59,9 +59,9 @@ _______________
 **Apex Tigers**
 
 ### ✨ Contributors ✨
-**Sari Linton**
-**Flyness Namatama**
-**Daniel Enesi**
-**Bennie Ferguson III**
+**Sari Linton,**
+**Flyness Namatama,**
+**Daniel Enesi,**
+**Bennie Ferguson III,**
 **Eric Abraham Jr.**
 
