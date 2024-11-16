@@ -4,6 +4,8 @@ import AppNavbar from './components/Navbar';
 import Overview from './pages/Overview';
 import Footer from './components/Footer';
 import LandingPage from './components/LandingPage';
+import BudgetingPage from './components/budgeting';
+import InvestmentPage from './components/investment';
 import { Navbar } from 'react-bootstrap';
 
 function App() {
@@ -14,12 +16,11 @@ function App() {
         <div className="content mt-5">
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          {/*<Route path="/budgeting" element={<Budgeting />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/investment" element={<Investment />} />*/}
+          <Route path="/budgeting" element={<BudgetingPage />} />
+          {/*<Route path="/signup" element={<Signup />} />*/}
+          <Route path="/investment" element={<InvestmentPage />} />
         </Routes>
         </div>
-        
         <Footer />
       </div>
   </Router>

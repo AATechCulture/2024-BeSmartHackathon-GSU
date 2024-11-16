@@ -22,14 +22,13 @@ const AppNavbar = () => {
             <Nav.Link href="/" active={location.pathname === '/'}>
               Overview
             </Nav.Link>
-            <Nav.Link href="/budget" active={location.pathname === '/budget'}>
+            <Nav.Link href="/budgeting" active={location.pathname === '/budgeting'}>
               Budget
             </Nav.Link>
-            <Nav.Link href="/Investment" active={location.pathname === '/Investment'}>
+            <Nav.Link href="/Investment" active={location.pathname === '/investment'}>
               Investment
             </Nav.Link>
-            {/*<Nav.Link href="/reports" active={location.pathname === '/reports'}>
-              Reports
+            {/*<Nav.Link href="/Profile/authPage" active={location.pathname === '/authPage'
             </Nav.Link>*/}
 
             {/* Profile Dropdown */}
