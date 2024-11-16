@@ -1,512 +1,443 @@
-[
-    {
-        "name": "Investment Mix 1",
+{
+    "Investment Mix 1": {
         "stocks": [
             {
                 "name": "Stock_1_1",
-                "value": 888,
-                "percentage": 5.6
-            },
-            {
-                "name": "Stock_1_2",
-                "value": 668,
-                "percentage": -6.5
-            },
-            {
-                "name": "Stock_1_3",
-                "value": 795,
-                "percentage": -2.1
-            },
-            {
-                "name": "Stock_1_4",
-                "value": 116,
-                "percentage": 1.2
-            },
-            {
-                "name": "Stock_1_5",
-                "value": 708,
-                "percentage": 4.1
-            },
-            {
-                "name": "Stock_1_6",
-                "value": 195,
-                "percentage": 8.0
-            }
-        ]
-    },
-    {
-        "name": "Investment Mix 2",
-        "stocks": [
-            {
-                "name": "Stock_2_1",
-                "value": 160,
-                "percentage": -1.0
-            },
-            {
-                "name": "Stock_2_2",
-                "value": 536,
-                "percentage": 5.7
-            },
-            {
-                "name": "Stock_2_3",
-                "value": 421,
-                "percentage": -10.0
-            },
-            {
-                "name": "Stock_2_4",
-                "value": 378,
-                "percentage": 2.7
-            },
-            {
-                "name": "Stock_2_5",
-                "value": 820,
-                "percentage": 8.6
-            }
-        ]
-    },
-    {
-        "name": "Investment Mix 3",
-        "stocks": [
-            {
-                "name": "Stock_3_1",
-                "value": 92,
-                "percentage": -5.0
-            },
-            {
-                "name": "Stock_3_2",
-                "value": 693,
-                "percentage": 3.0
-            },
-            {
-                "name": "Stock_3_3",
-                "value": 211,
-                "percentage": 4.2
-            }
-        ]
-    },
-    {
-        "name": "Investment Mix 4",
-        "stocks": [
-            {
-                "name": "Stock_4_1",
-                "value": 247,
-                "percentage": 5.3
-            },
-            {
-                "name": "Stock_4_2",
-                "value": 280,
-                "percentage": -4.1
-            },
-            {
-                "name": "Stock_4_3",
-                "value": 880,
-                "percentage": -0.5
-            },
-            {
-                "name": "Stock_4_4",
-                "value": 371,
-                "percentage": 5.8
-            }
-        ]
-    },
-    {
-        "name": "Investment Mix 5",
-        "stocks": [
-            {
-                "name": "Stock_5_1",
-                "value": 916,
-                "percentage": 3.0
-            },
-            {
-                "name": "Stock_5_2",
-                "value": 535,
-                "percentage": 3.5
-            },
-            {
-                "name": "Stock_5_3",
-                "value": 323,
-                "percentage": -6.2
-            },
-            {
-                "name": "Stock_5_4",
-                "value": 788,
-                "percentage": 4.7
-            },
-            {
-                "name": "Stock_5_5",
-                "value": 795,
-                "percentage": -9.7
-            },
-            {
-                "name": "Stock_5_6",
-                "value": 578,
-                "percentage": 3.3
-            },
-            {
-                "name": "Stock_5_7",
-                "value": 952,
-                "percentage": 7.8
-            }
-        ]
-    },
-    {
-        "name": "Investment Mix 6",
-        "stocks": [
-            {
-                "name": "Stock_6_1",
-                "value": 301,
-                "percentage": 7.0
-            },
-            {
-                "name": "Stock_6_2",
-                "value": 334,
-                "percentage": -5.2
-            },
-            {
-                "name": "Stock_6_3",
-                "value": 167,
-                "percentage": -9.6
-            },
-            {
-                "name": "Stock_6_4",
-                "value": 662,
-                "percentage": -2.0
-            },
-            {
-                "name": "Stock_6_5",
-                "value": 157,
-                "percentage": 1.2
-            },
-            {
-                "name": "Stock_6_6",
-                "value": 727,
-                "percentage": 5.4
-            },
-            {
-                "name": "Stock_6_7",
-                "value": 649,
-                "percentage": -0.2
-            }
-        ]
-    },
-    {
-        "name": "Investment Mix 7",
-        "stocks": [
-            {
-                "name": "Stock_7_1",
-                "value": 696,
-                "percentage": -2.5
-            },
-            {
-                "name": "Stock_7_2",
-                "value": 88,
-                "percentage": 1.0
-            },
-            {
-                "name": "Stock_7_3",
-                "value": 318,
-                "percentage": 8.6
-            },
-            {
-                "name": "Stock_7_4",
-                "value": 557,
-                "percentage": -7.1
-            },
-            {
-                "name": "Stock_7_5",
-                "value": 414,
-                "percentage": -2.8
-            },
-            {
-                "name": "Stock_7_6",
-                "value": 509,
-                "percentage": 2.3
-            },
-            {
-                "name": "Stock_7_7",
-                "value": 306,
-                "percentage": -3.0
-            }
-        ]
-    },
-    {
-        "name": "Investment Mix 8",
-        "stocks": [
-            {
-                "name": "Stock_8_1",
-                "value": 909,
-                "percentage": 2.3
-            },
-            {
-                "name": "Stock_8_2",
-                "value": 761,
+                "value": 732,
                 "percentage": 5.1
             },
             {
-                "name": "Stock_8_3",
-                "value": 558,
-                "percentage": 9.9
+                "name": "Stock_1_2",
+                "value": 407,
+                "percentage": 9.0
+            },
+            {
+                "name": "Stock_1_3",
+                "value": 508,
+                "percentage": 2.0
+            },
+            {
+                "name": "Stock_1_4",
+                "value": 897,
+                "percentage": 9.0
             }
         ]
     },
-    {
-        "name": "Investment Mix 9",
+    "Investment Mix 2": {
         "stocks": [
             {
-                "name": "Stock_9_1",
-                "value": 537,
-                "percentage": 7.2
+                "name": "Stock_2_1",
+                "value": 602,
+                "percentage": 1.8
             },
             {
-                "name": "Stock_9_2",
-                "value": 95,
-                "percentage": 2.9
+                "name": "Stock_2_2",
+                "value": 533,
+                "percentage": 3.5
             },
             {
-                "name": "Stock_9_3",
-                "value": 748,
-                "percentage": -0.6
+                "name": "Stock_2_3",
+                "value": 392,
+                "percentage": -4.8
             },
             {
-                "name": "Stock_9_4",
-                "value": 218,
-                "percentage": 6.2
+                "name": "Stock_2_4",
+                "value": 878,
+                "percentage": -3.3
             }
         ]
     },
-    {
-        "name": "Investment Mix 10",
+    "Investment Mix 3": {
         "stocks": [
             {
-                "name": "Stock_10_1",
-                "value": 938,
+                "name": "Stock_3_1",
+                "value": 59,
+                "percentage": -4.0
+            },
+            {
+                "name": "Stock_3_2",
+                "value": 596,
+                "percentage": 7.0
+            }
+        ]
+    },
+    "Investment Mix 4": {
+        "stocks": [
+            {
+                "name": "Stock_4_1",
+                "value": 165,
+                "percentage": -3.7
+            },
+            {
+                "name": "Stock_4_2",
+                "value": 252,
+                "percentage": 8.6
+            }
+        ]
+    },
+    "Investment Mix 5": {
+        "stocks": [
+            {
+                "name": "Stock_5_1",
+                "value": 455,
+                "percentage": 7.6
+            },
+            {
+                "name": "Stock_5_2",
+                "value": 752,
+                "percentage": 8.7
+            },
+            {
+                "name": "Stock_5_3",
+                "value": 327,
+                "percentage": -0.7
+            }
+        ]
+    },
+    "Investment Mix 6": {
+        "stocks": [
+            {
+                "name": "Stock_6_1",
+                "value": 165,
+                "percentage": -2.8
+            },
+            {
+                "name": "Stock_6_2",
+                "value": 889,
+                "percentage": 2.3
+            }
+        ]
+    },
+    "Investment Mix 7": {
+        "stocks": [
+            {
+                "name": "Stock_7_1",
+                "value": 762,
+                "percentage": 1.7
+            },
+            {
+                "name": "Stock_7_2",
+                "value": 339,
+                "percentage": 7.9
+            },
+            {
+                "name": "Stock_7_3",
+                "value": 100,
+                "percentage": 3.7
+            },
+            {
+                "name": "Stock_7_4",
+                "value": 603,
+                "percentage": 0.2
+            },
+            {
+                "name": "Stock_7_5",
+                "value": 591,
+                "percentage": -0.2
+            }
+        ]
+    },
+    "Investment Mix 8": {
+        "stocks": [
+            {
+                "name": "Stock_8_1",
+                "value": 867,
+                "percentage": 5.7
+            },
+            {
+                "name": "Stock_8_2",
+                "value": 828,
                 "percentage": -2.3
             },
             {
+                "name": "Stock_8_3",
+                "value": 877,
+                "percentage": 0.3
+            },
+            {
+                "name": "Stock_8_4",
+                "value": 550,
+                "percentage": -2.3
+            },
+            {
+                "name": "Stock_8_5",
+                "value": 320,
+                "percentage": -2.0
+            }
+        ]
+    },
+    "Investment Mix 9": {
+        "stocks": [
+            {
+                "name": "Stock_9_1",
+                "value": 188,
+                "percentage": 1.4
+            },
+            {
+                "name": "Stock_9_2",
+                "value": 928,
+                "percentage": -3.1
+            },
+            {
+                "name": "Stock_9_3",
+                "value": 678,
+                "percentage": 4.7
+            },
+            {
+                "name": "Stock_9_4",
+                "value": 320,
+                "percentage": 8.6
+            },
+            {
+                "name": "Stock_9_5",
+                "value": 571,
+                "percentage": 2.7
+            },
+            {
+                "name": "Stock_9_6",
+                "value": 192,
+                "percentage": 9.1
+            }
+        ]
+    },
+    "Investment Mix 10": {
+        "stocks": [
+            {
+                "name": "Stock_10_1",
+                "value": 958,
+                "percentage": -2.4
+            },
+            {
                 "name": "Stock_10_2",
-                "value": 372,
-                "percentage": 8.8
+                "value": 517,
+                "percentage": 5.5
             },
             {
                 "name": "Stock_10_3",
-                "value": 939,
-                "percentage": 9.4
+                "value": 473,
+                "percentage": 10.0
             },
             {
                 "name": "Stock_10_4",
-                "value": 379,
-                "percentage": -6.6
+                "value": 704,
+                "percentage": 5.5
             },
             {
                 "name": "Stock_10_5",
-                "value": 555,
-                "percentage": -5.3
-            }
-        ]
-    },
-    {
-        "name": "Investment Mix 11",
-        "stocks": [
-            {
-                "name": "Stock_11_1",
-                "value": 434,
-                "percentage": 2.6
+                "value": 381,
+                "percentage": -3.7
             },
             {
-                "name": "Stock_11_2",
-                "value": 338,
-                "percentage": 3.2
-            }
-        ]
-    },
-    {
-        "name": "Investment Mix 12",
-        "stocks": [
-            {
-                "name": "Stock_12_1",
-                "value": 593,
-                "percentage": -3.6
-            },
-            {
-                "name": "Stock_12_2",
-                "value": 122,
-                "percentage": -6.5
-            },
-            {
-                "name": "Stock_12_3",
-                "value": 967,
-                "percentage": -6.7
-            }
-        ]
-    },
-    {
-        "name": "Investment Mix 13",
-        "stocks": [
-            {
-                "name": "Stock_13_1",
-                "value": 289,
-                "percentage": -2.0
-            },
-            {
-                "name": "Stock_13_2",
-                "value": 912,
-                "percentage": -5.0
-            },
-            {
-                "name": "Stock_13_3",
-                "value": 556,
-                "percentage": 0.7
-            },
-            {
-                "name": "Stock_13_4",
-                "value": 351,
-                "percentage": -2.1
-            },
-            {
-                "name": "Stock_13_5",
-                "value": 221,
-                "percentage": -4.2
-            },
-            {
-                "name": "Stock_13_6",
-                "value": 398,
-                "percentage": -5.2
-            }
-        ]
-    },
-    {
-        "name": "Investment Mix 14",
-        "stocks": [
-            {
-                "name": "Stock_14_1",
-                "value": 706,
-                "percentage": -1.0
-            },
-            {
-                "name": "Stock_14_2",
-                "value": 430,
+                "name": "Stock_10_6",
+                "value": 165,
                 "percentage": 3.3
             }
         ]
     },
-    {
-        "name": "Investment Mix 15",
+    "Investment Mix 11": {
+        "stocks": [
+            {
+                "name": "Stock_11_1",
+                "value": 341,
+                "percentage": -1.5
+            },
+            {
+                "name": "Stock_11_2",
+                "value": 234,
+                "percentage": 6.0
+            }
+        ]
+    },
+    "Investment Mix 12": {
+        "stocks": [
+            {
+                "name": "Stock_12_1",
+                "value": 135,
+                "percentage": 9.0
+            },
+            {
+                "name": "Stock_12_2",
+                "value": 635,
+                "percentage": 4.9
+            },
+            {
+                "name": "Stock_12_3",
+                "value": 922,
+                "percentage": -0.8
+            },
+            {
+                "name": "Stock_12_4",
+                "value": 934,
+                "percentage": 7.0
+            },
+            {
+                "name": "Stock_12_5",
+                "value": 937,
+                "percentage": -2.1
+            }
+        ]
+    },
+    "Investment Mix 13": {
+        "stocks": [
+            {
+                "name": "Stock_13_1",
+                "value": 646,
+                "percentage": 0.4
+            },
+            {
+                "name": "Stock_13_2",
+                "value": 234,
+                "percentage": -0.4
+            },
+            {
+                "name": "Stock_13_3",
+                "value": 405,
+                "percentage": 2.5
+            },
+            {
+                "name": "Stock_13_4",
+                "value": 725,
+                "percentage": 0.6
+            },
+            {
+                "name": "Stock_13_5",
+                "value": 104,
+                "percentage": -4.3
+            }
+        ]
+    },
+    "Investment Mix 14": {
+        "stocks": [
+            {
+                "name": "Stock_14_1",
+                "value": 733,
+                "percentage": 6.8
+            },
+            {
+                "name": "Stock_14_2",
+                "value": 140,
+                "percentage": -2.3
+            }
+        ]
+    },
+    "Investment Mix 15": {
         "stocks": [
             {
                 "name": "Stock_15_1",
-                "value": 572,
-                "percentage": 9.7
+                "value": 205,
+                "percentage": 3.3
             },
             {
                 "name": "Stock_15_2",
-                "value": 289,
-                "percentage": 3.6
+                "value": 57,
+                "percentage": -4.6
             }
         ]
     },
-    {
-        "name": "Investment Mix 16",
+    "Investment Mix 16": {
         "stocks": [
             {
                 "name": "Stock_16_1",
-                "value": 948,
-                "percentage": 7.1
+                "value": 283,
+                "percentage": -1.5
             },
             {
                 "name": "Stock_16_2",
-                "value": 155,
-                "percentage": -2.8
-            },
-            {
-                "name": "Stock_16_3",
-                "value": 509,
-                "percentage": 1.3
-            },
-            {
-                "name": "Stock_16_4",
-                "value": 844,
-                "percentage": 10.0
+                "value": 824,
+                "percentage": 7.1
             }
         ]
     },
-    {
-        "name": "Investment Mix 17",
+    "Investment Mix 17": {
         "stocks": [
             {
                 "name": "Stock_17_1",
-                "value": 195,
-                "percentage": -5.3
+                "value": 113,
+                "percentage": 6.0
             },
             {
                 "name": "Stock_17_2",
-                "value": 320,
-                "percentage": -2.8
+                "value": 582,
+                "percentage": -1.4
+            },
+            {
+                "name": "Stock_17_3",
+                "value": 165,
+                "percentage": 8.7
+            },
+            {
+                "name": "Stock_17_4",
+                "value": 155,
+                "percentage": 8.8
+            },
+            {
+                "name": "Stock_17_5",
+                "value": 957,
+                "percentage": 7.0
             }
         ]
     },
-    {
-        "name": "Investment Mix 18",
+    "Investment Mix 18": {
         "stocks": [
             {
                 "name": "Stock_18_1",
-                "value": 927,
-                "percentage": -7.6
+                "value": 980,
+                "percentage": 1.9
             },
             {
                 "name": "Stock_18_2",
-                "value": 898,
-                "percentage": -3.4
+                "value": 324,
+                "percentage": -1.4
             },
             {
                 "name": "Stock_18_3",
-                "value": 613,
-                "percentage": -0.2
+                "value": 112,
+                "percentage": 4.6
             },
             {
                 "name": "Stock_18_4",
-                "value": 177,
-                "percentage": 2.2
+                "value": 553,
+                "percentage": 0.6
             },
             {
                 "name": "Stock_18_5",
-                "value": 178,
-                "percentage": -7.5
+                "value": 517,
+                "percentage": 9.1
             },
             {
                 "name": "Stock_18_6",
-                "value": 426,
-                "percentage": -0.3
+                "value": 381,
+                "percentage": 3.6
+            },
+            {
+                "name": "Stock_18_7",
+                "value": 567,
+                "percentage": 9.7
             }
         ]
     },
-    {
-        "name": "Investment Mix 19",
+    "Investment Mix 19": {
         "stocks": [
             {
                 "name": "Stock_19_1",
-                "value": 736,
-                "percentage": -8.7
+                "value": 787,
+                "percentage": 1.8
             },
             {
                 "name": "Stock_19_2",
-                "value": 611,
-                "percentage": 6.3
+                "value": 992,
+                "percentage": 3.4
             },
             {
                 "name": "Stock_19_3",
-                "value": 487,
-                "percentage": 0.8
+                "value": 741,
+                "percentage": 4.2
             },
             {
                 "name": "Stock_19_4",
-                "value": 80,
-                "percentage": -0.5
-            },
-            {
-                "name": "Stock_19_5",
-                "value": 287,
-                "percentage": -7.6
+                "value": 977,
+                "percentage": -1.8
             }
         ]
     }
-]
+}
