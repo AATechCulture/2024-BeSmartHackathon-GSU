@@ -47,6 +47,7 @@ def fetch_bank_data(iin: str) -> dict:
     # using requests to fetch the data of a bank iin
     with open("bank_data.json", 'r', encoding="utf-8") as file:
         bank_data = json.load(file)
+    # {'salary': 7160, 'shopping': 462, 'groceries': 1130, 'gas': 841, 'bills': 1207}
     return bank_data[iin]
 
 
@@ -63,5 +64,6 @@ if __name__ == "__main__":
     # generate_bank_data()
     # verify_bank_data()
     # get_extra_monies()
+    print(fetch_bank_data("406552"))
     # print(x)
     pass
