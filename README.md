@@ -5,8 +5,8 @@ Feel free to use any languages or frameworks, but the following information must
 _______________
 _______________
 
-# Project Name
-**sAIve**
+# sAIve
+**Your trusted partner for smart budgeting, investments, and financial growth.**
 
 ## Challenge Statement(s) Addressed 🎯
 **Many 18-35 year olds lack the essential financial knowledge and skills to effectively manage their money, budget wisely, and make informed investment choices, hindering their ability to achieve financial stability and reach their goals.**
@@ -49,7 +49,7 @@ _______________
 
 ### Project Checklist 🏁
 - [ ] Presentation complete and linked
-- [ ] Video pitch recorded and linked
+- [ ] [Video pitch recorded and linked] (https://youtu.be/36ub3SMs5Mo)
 - [ ] Code merged to main branch
 
 ### School Name 🏫
