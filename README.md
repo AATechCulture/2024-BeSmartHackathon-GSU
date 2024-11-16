@@ -26,21 +26,15 @@ Examples:
 
 **Full list of technoclogies:**
 
-**Hugging Face**
-**REACT**
-**Node.js**
-**Java**
-**Python**
-**Command-Line**
+*Hugging Face
+*REACT
+*Node.js
+*Java
+*Python
+*Command-Line
 
 
 
-Example:
-**Hugging Face
-* Hugging Face AI Models
-* Next.js
-* Java
-* ReactJS
 
 ### Link to Video Pitch 📹
 **...point us to the short clip that tells us about your solution 😄**
