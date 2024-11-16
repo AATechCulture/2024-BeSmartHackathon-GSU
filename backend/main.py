@@ -2,6 +2,8 @@
 import json
 import os
 
+from random import choice
+
 from flask import Flask, request, jsonify
 
 from bank_gen import fetch_bank_data
@@ -44,3 +46,18 @@ def get_potential_stock() -> str:
     }
 
     return jsonify(potential_mixes_to_invest)
+
+@app.post("/profile")
+def get_profile_data() -> str:
+    """Returns the profile data"""
+    # return the profile data
+    with open(os.path.join(basedir, "user_details.json"), 'r', encoding="utf-8") as file:
+        users_data = json.load(file)
+        iin = choice(tuple(users_data))
+        full_name = users_data[iin]["name"]
+    profile_data = {
+        "full_name": full_name,
+        "iin": iin
+    }
+
+    return jsonify(profile_data)
