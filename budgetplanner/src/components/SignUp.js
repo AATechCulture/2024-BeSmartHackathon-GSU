@@ -27,7 +27,6 @@ function Login() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({}), // Empty body or minimal data
         }
       );
 
