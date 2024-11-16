@@ -3,11 +3,11 @@ import pandas as pd
 import json
 
 # Load data from bank_data.json
-with open('C:\\Users\\saril\\Documents\\BeSmart\\bank_data.json', 'r') as f:
+with open('bank_data.json', 'r') as f:
     bank_data = json.load(f)
 
 # Load user data from user_details.json
-with open('C:\\Users\\saril\\Documents\\BeSmart\\user_details.json', 'r') as f:
+with open('user_details.json', 'r') as f:
     user_details = json.load(f)
 
 # Select a user to generate a financial plan
