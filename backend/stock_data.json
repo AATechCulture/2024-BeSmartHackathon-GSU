@@ -1,5 +1,5 @@
 {
-    "Investment Mix 1": {
+    "Tech Investment Mix": {
         "stocks": [
             {
                 "name": "Stock_1_1",
@@ -23,7 +23,7 @@
             }
         ]
     },
-    "Investment Mix 2": {
+    "Health Investment Mix 2": {
         "stocks": [
             {
                 "name": "Stock_2_1",
@@ -37,7 +37,7 @@
             }
         ]
     },
-    "Investment Mix 3": {
+    "Finance Investment Mix 3": {
         "stocks": [
             {
                 "name": "Stock_3_1",
@@ -51,7 +51,7 @@
             }
         ]
     },
-    "Investment Mix 4": {
+    "Fashion Investment Mix 4": {
         "stocks": [
             {
                 "name": "Stock_4_1",
