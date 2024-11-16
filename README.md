@@ -6,22 +6,35 @@ _______________
 _______________
 
 # Project Name
+**sAIve**
 
 ## Challenge Statement(s) Addressed 🎯
-**...include the challenge statement(s) the project worked to address**
+**Many 18-35 year olds lack the essential financial knowledge and skills to effectively manage their money, budget wisely, and make informed investment choices, hindering their ability to achieve financial stability and reach their goals.**
 
 Examples:
 * How might we decrease the United States chances of alien and monster attacks given what we know from popular alien and monster movies?
 * How might we ....
 
 ## Project Description 🤯
-**....at least 3 sentences describing what the project does and how it works**
+**sAIve is your all-in-one AI-powered financial companion. It automatically creates personalized budgets, tracks your spending habits, and provides smart investment recommendations tailored to your goals.  Say goodbye to financial stress and hello to financial freedom**
 
 ## Project Value 💰
-**....at least 3 sentences describing your target customer and tangible benefits from your solution**
+**Our target customer is a young adult, aged 18-35, who is tech-savvy, ambitious, and eager to take control of their finances but may feel overwhelmed by the complexities of budgeting, saving, and investing.  Beacon Wallet provides them with a user-friendly platform to effortlessly track their spending, create personalized budgets, and receive tailored investment advice, empowering them to make informed financial decisions and achieve their financial goals with confidence.n**
 
 ## Tech Overview 💻
-**... what tech was used to bring this project to life?**
+**... what tech was used to bring this project to life?
+**The application leverages a combination of natural language processing, machine learning and statistical analysis to provide personalized financial planning and budgetting. Built in python, the app uses transformers for NLP, specifically a zero-shot classification.
+
+**Full list of technoclogies:**
+
+**Hugging Face
+REACT
+Node.js
+Java
+Python
+Command-Line**
+
+
 
 Example:
 * FastAPI
@@ -37,11 +50,11 @@ Example:
 **...point us to your PPT or Canva slides 😍**
 
 ### Team Checklist ✅
-- [ ] Team photo
-- [ ] Team Slack channel
-- [ ] Communication established with mentor
-- [ ] Repo creation from this template
-- [ ] Hangar registration
+- [ x] Team photo
+- [ x] Team Slack channel
+- [ x] Communication established with mentor
+- [x ] Repo creation from this template
+- [x ] Hangar registration
 
 ### Project Checklist 🏁
 - [ ] Presentation complete and linked
@@ -49,13 +62,15 @@ Example:
 - [ ] Code merged to main branch
 
 ### School Name 🏫
-The ABC School
+**Grambling State University**
 
 ### Team Name 🏷
-Coding Costars
+**Apex Tigers**
 
 ### ✨ Contributors ✨
-**...tell the world who you and your team are 🙂**
-* Team member X 
-* Team member Y 
-* Team member Z 
+**Sari Linton
+Flyness Namatama
+Daniel Enesi
+Bennie Ferguson III
+Eric Abraham Jr.**
+
