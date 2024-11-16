@@ -4,11 +4,13 @@ import os
 
 from flask import Flask, request, jsonify
 
+from bank_gen import fetch_bank_data
+from invest_data import predict_potential_stock_mix
 
 app = Flask(__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))
+API_POST_URL = "https://fantastic-capybara-g4w9xx544wh5j4-5000.app.github.dev/"
 
-# make a route for the bank data
 @app.post("/bank")
 def get_bank_data() -> str:
     """Returns bank data"""
@@ -27,4 +29,18 @@ def get_user_data() -> str:
     with open(os.path.join(basedir, "user_details.json"), 'r', encoding="utf-8") as file:
         users_data = json.load(file)
     return jsonify(users_data[iin])
-# app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + os.path.join(basedir, "db.sqlite")
+
+@app.post("/stock")
+def get_potential_stock() -> str:
+    """Returns potential stock data for the user"""
+    iin = request.get_json()["iin"]
+    # return the potential stock data
+    bank_data = fetch_bank_data(iin)
+    # Get the amount of money left after all the expenses
+    extra_money = 2*bank_data["salary"] - sum(bank_data.values())
+    # send a post request to the stock data API
+    potential_mixes_to_invest = {
+        "potential_investments": predict_potential_stock_mix(extra_money)
+    }
+
+    return jsonify(potential_mixes_to_invest)
