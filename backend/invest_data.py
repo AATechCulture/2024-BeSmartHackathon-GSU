@@ -7,6 +7,8 @@ from collections import deque
 from random import randint
 from statistics import mean
 
+MAX_LENGTH = 3
+
 
 def predict_potential_stock_mix(extra_money: int) -> str:
     """Predicts the potential stock mix for the user
@@ -20,8 +22,8 @@ def predict_potential_stock_mix(extra_money: int) -> str:
         stock_data = json.load(file)
     print(extra_money)
     money_to_invest = extra_money // 1.5
-    stocks_to_invest = deque(maxlen=2)
-    top_2 = []
+    stocks_to_invest = deque(maxlen=MAX_LENGTH)
+    top_3 = []
     print(money_to_invest)
 
     for stock_mix, stock_data in stock_data.items():
@@ -29,13 +31,13 @@ def predict_potential_stock_mix(extra_money: int) -> str:
         stock_percent_average = mean(stock["percentage"] for stock in stock_data["stocks"])
         # adds those with average price within range of money_to_invest
         if money_to_invest // 2 < stock_value_average < money_to_invest:
-            if len(top_2) < 2:
-                heapq.heappush(top_2, stock_percent_average)
+            if len(top_3) < MAX_LENGTH:
+                heapq.heappush(top_3, stock_percent_average)
                 stocks_to_invest.append(stock_mix)
-            elif 0 > stock_percent_average > top_2[0]:
-                heapq.heapreplace(top_2, stock_percent_average)
+            elif 0 > stock_percent_average > top_3[0]:
+                heapq.heapreplace(top_3, stock_percent_average)
                 stocks_to_invest.append(stock_mix)
-    print(stocks_to_invest)
+
     return list(stocks_to_invest)
 
 
