@@ -1,94 +1,155 @@
 /* Hero Section */
 .budget-hero {
-    text-align: center;
-    background: linear-gradient(135deg, #4caf50, #81c784);
-    color: white;
-    padding: 50px 10%;
-    border-radius: 12px;
-  }
-  
-  .budget-hero h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
-  }
-  
-  .budget-hero p {
-    font-size: 1.2rem;
-  }
-  
-  /* Expense Input Form */
-  .expense-input {
-    background-color: #ffffff;
-    padding: 30px;
-    margin: 30px 0;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  .expense-input h2 {
-    font-size: 2rem;
-    color: #2e7d32;
-    margin-bottom: 20px;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-group label {
-    font-size: 1rem;
-    color: #555;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ced4da;
-    border-radius: 8px;
-  }
-  
-  button {
-    background-color: #4caf50;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #388e3c;
-  }
-  
-  /* Graphs Section */
-  .graphs-section {
-    margin: 40px 0;
-    text-align: center;
-  }
-  
-  .graphs-section h2 {
-    color: #2e7d32;
-  }
-  
-  .graphs-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-  .graph {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-  }
-  
+  text-align: center;
+  background: linear-gradient(135deg, #4caf50, #81c784);
+  color: white;
+  padding: 50px 10%;
+  border-radius: 12px;
+}
+
+.budget-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.budget-hero p {
+  font-size: 1.2rem;
+}
+
+/* Expense Input Form */
+.expense-input {
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 30px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.expense-input h2 {
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+/* Graphs Section */
+.graphs-section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.graphs-section h2 {
+  color: #2e7d32;
+}
+
+.graphs-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.graph {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+/* Recommendations Section */
+.recommendations-section {
+  margin: 40px 0;
+  padding: 30px;
+  background-color: #ffffff; /* White background */
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.recommendations-section h2 {
+  font-size: 2rem;
+  color: #388e3c; /* Dark green for heading */
+  margin-bottom: 20px;
+}
+
+.recommendations-section .recommendations-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.recommendations-section .recommendation-card {
+  background-color: #f0f8f0; /* Light greenish background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.recommendations-section .recommendation-card:hover {
+  background-color: #e8f5e9; /* Slightly darker green hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.recommendations-section .recommendation-icon {
+  font-size: 2.5rem;
+  color: #388e3c; /* Icon color */
+}
+
+.recommendations-section .recommendation-text {
+  font-size: 1rem;
+  color: #333; /* Neutral text color */
+  line-height: 1.4;
+}
+
+.recommendations-section .recommendation-badge {
+  background-color: #81c784; /* Medium green badge */
+  color: white;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 12px;
+  text-transform: uppercase;
+  margin-top: 5px;
+}

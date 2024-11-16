@@ -1,37 +1,61 @@
-import React, { useState } from "react";
+import React, { useState } from "react"; 
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
 import "../styles/login.css";
 
 function Login() {
-  const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-    confirmPassword: "",
   });
 
-  const handleToggle = () => {
-    setIsLogin(!isLogin);
-    setFormData({ email: "", password: "", confirmPassword: "" });
-  };
+  const [greeting, setGreeting] = useState(""); // To store the greeting
+  const [error, setError] = useState(""); // To handle errors
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!isLogin && formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match!");
-      return;
+    setError(""); // Reset error message
+
+    try {
+      const response = await fetch(
+        "https://fantastic-capybara-g4w9xx544wh5j4-5000.app.github.dev/profile",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch data from the API.");
+      }
+
+      const data = await response.json();
+      const username = data.full_name || "Guest"; // Extract username or use "Guest"
+      const iin = data.iin;
+      localStorage.iin = iin;
+      setGreeting(`Hi, ${username}!`);
+
+      // Wait for 2 seconds and redirect to the investment page
+      setTimeout(() => {
+        navigate("/investment");
+      }, 2000);
+    } catch (error) {
+      console.error("Error during login:", error);
+      setError(error.message || "An unexpected error occurred.");
     }
-    alert(`Welcome ${isLogin ? "Back" : ""}!`);
   };
 
   return (
     <div className="auth-page">
       <div className="auth-container">
-        <h1>{isLogin ? "Login" : "Sign Up"}</h1>
+        <h1>Login</h1>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="email">Email</label>
@@ -39,9 +63,6 @@ function Login() {
               type="email"
               id="email"
               name="email"
-              value={formData.email}
-              onChange={handleInputChange}
-              required
             />
           </div>
           <div className="form-group">
@@ -55,26 +76,10 @@ function Login() {
               required
             />
           </div>
-          {!isLogin && (
-            <div className="form-group">
-              <label htmlFor="confirmPassword">Confirm Password</label>
-              <input
-                type="password"
-                id="confirmPassword"
-                name="confirmPassword"
-                value={formData.confirmPassword}
-                onChange={handleInputChange}
-                required
-              />
-            </div>
-          )}
-          <button type="submit">{isLogin ? "Login" : "Sign Up"}</button>
+          <button type="submit">Login</button>
         </form>
-        <p onClick={handleToggle} className="toggle-text">
-          {isLogin
-            ? "Don't have an account? Sign Up"
-            : "Already have an account? Login"}
-        </p>
+        {error && <p className="error-text">{error}</p>}
+        {greeting && <p className="greeting">{greeting}</p>}
       </div>
     </div>
   );
