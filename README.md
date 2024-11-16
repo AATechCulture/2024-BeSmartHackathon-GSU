@@ -22,22 +22,21 @@ Examples:
 **Our target customer is a young adult, aged 18-35, who is tech-savvy, ambitious, and eager to take control of their finances but may feel overwhelmed by the complexities of budgeting, saving, and investing.  Beacon Wallet provides them with a user-friendly platform to effortlessly track their spending, create personalized budgets, and receive tailored investment advice, empowering them to make informed financial decisions and achieve their financial goals with confidence.n**
 
 ## Tech Overview 💻
-**... what tech was used to bring this project to life?
-**The application leverages a combination of natural language processing, machine learning and statistical analysis to provide personalized financial planning and budgetting. Built in python, the app uses transformers for NLP, specifically a zero-shot classification.
+**The application leverages a combination of natural language processing, machine learning and statistical analysis to provide personalized financial planning and budgetting. Built in python, the app uses transformers for NLP, specifically a zero-shot classification.**
 
 **Full list of technoclogies:**
 
-**Hugging Face
-REACT
-Node.js
-Java
-Python
-Command-Line**
+**Hugging Face**
+**REACT**
+**Node.js**
+**Java**
+**Python**
+**Command-Line**
 
 
 
 Example:
-* FastAPI
+**Hugging Face
 * Hugging Face AI Models
 * Next.js
 * Java
@@ -68,9 +67,9 @@ Example:
 **Apex Tigers**
 
 ### ✨ Contributors ✨
-**Sari Linton
-Flyness Namatama
-Daniel Enesi
-Bennie Ferguson III
-Eric Abraham Jr.**
+**Sari Linton**
+**Flyness Namatama**
+**Daniel Enesi**
+**Bennie Ferguson III**
+**Eric Abraham Jr.**
 
