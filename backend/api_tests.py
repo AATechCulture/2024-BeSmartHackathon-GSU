@@ -9,7 +9,7 @@ def test_get_potential_stock():
     response = req.post(API_POST_URL + "stock", json={"iin": "216040"}, timeout=10)
     # assert response.status_code == 200
     print(response.json())
-    # assert response.json() == ["Investment Mix 1", "Investment Mix 2"]
+    # assert response.json() == ["Investment Mix 1", "Investment Mix 2", "Investment Mix 3"]
 
 def test_get_profile_data():
     """Test get_profile_data"""
