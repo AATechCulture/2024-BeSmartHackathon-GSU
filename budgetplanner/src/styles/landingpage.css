@@ -35,7 +35,9 @@ body {
     color: #f0f0f0;
   }
   
-  .hero-buttons button {
+  /* Hero Links */
+  .hero-buttons a {
+    display: inline-block; /* Ensure consistent block size */
     margin-right: 15px;
     padding: 12px 25px;
     border: none;
@@ -44,13 +46,16 @@ body {
     cursor: pointer;
     color: #ffffff;
     background-color: #388e3c; /* Rich green */
-    transition: background 0.3s;
+    text-decoration: none; /* Remove underline */
+    transition: background 0.3s, transform 0.2s ease;
   }
   
-  .hero-buttons button:hover {
+  .hero-buttons a:hover {
     background-color: #2e7d32; /* Darker green for hover */
+    transform: translateY(-2px); /* Slight lift on hover */
   }
   
+  /* Hero Image */
   .hero-image img {
     width: 500px;
     max-width: 100%;
@@ -124,20 +129,23 @@ body {
     color: #e8f5e9; /* Lightened text */
   }
   
-  .cta button {
+  .cta-button {
+    display: inline-block;
     padding: 15px 30px;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
+    font-weight: bold;
     color: #ffffff;
     background-color: #388e3c; /* Rich green */
+    text-decoration: none; /* Remove hyperlink underline */
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s, transform 0.2s ease;
   }
   
-  .cta button:hover {
+  .cta-button:hover {
     background-color: #2e7d32; /* Dark green for hover */
+    transform: translateY(-2px); /* Slight lift on hover */
   }
-  
   
   

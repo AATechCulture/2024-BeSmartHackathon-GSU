@@ -1,4 +1,5 @@
 import React from "react";
+import saiveImage from "../images/saive.jpg"
 import "../styles/landingpage.css";
 
 function LandingPage() {
@@ -7,16 +8,16 @@ function LandingPage() {
       {/* Hero Section */}
       <header className="hero">
         <div className="hero-content">
-          <h1>Welcome to sAIve</h1>
+          <h1>Welcome to <span className="brand">sAIve</span></h1>
           <p>Your trusted partner for smart budgeting, investments, and financial growth.</p>
           <div className="hero-buttons">
-            <button onClick={() => window.location.href = "/budgeting"}>Explore Budgeting</button>
-            <button onClick={() => window.location.href = "/signup"}>Sign Up</button>
-            <button onClick={() => window.location.href = "/investment"}>Investment Plans</button>
+            <a href="/budgeting" className="hero-link">Explore Budgeting</a>
+            <a href="/signup" className="hero-link">Sign Up</a>
+            <a href="/investment" className="hero-link">Investment Plans</a>
           </div>
         </div>
         <div className="hero-image">
-          <img src="https://via.placeholder.com/500" alt="Smart Financial Planning" />
+          <img src={saiveImage} alt="Smart Financial Planning" />
         </div>
       </header>
 
@@ -43,8 +44,9 @@ function LandingPage() {
       <section className="cta">
         <h2>Start Your Financial Journey</h2>
         <p>Sign up today and take the first step toward financial empowerment with sAIve.</p>
-        <button onClick={() => window.location.href = "/signup"}>Get Started</button>
-      </section>
+        <a href="/signup" className="cta-button">Get Started</a>
+    </section>
+
 
     </div>
   );

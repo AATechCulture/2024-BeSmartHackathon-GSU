@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../styles/authPage.css";
+import "../styles/login.css";
 
-function AuthPage() {
+function Login() {
   const [isLogin, setIsLogin] = useState(true);
   const [formData, setFormData] = useState({
     email: "",
@@ -80,4 +80,4 @@ function AuthPage() {
   );
 }
 
-export default AuthPage;
+export default Login;
