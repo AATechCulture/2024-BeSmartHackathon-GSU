@@ -19,9 +19,10 @@ def predict_potential_stock_mix(extra_money: int) -> str:
     with open("stock_data.json", 'r', encoding="utf-8") as file:
         stock_data = json.load(file)
     print(extra_money)
-    money_to_invest = extra_money // 2
+    money_to_invest = extra_money // 1.5
     stocks_to_invest = deque(maxlen=2)
     top_2 = []
+    print(money_to_invest)
 
     for stock_mix, stock_data in stock_data.items():
         stock_value_average = mean(stock["value"] for stock in stock_data["stocks"])
@@ -35,10 +36,10 @@ def predict_potential_stock_mix(extra_money: int) -> str:
                 heapq.heapreplace(top_2, stock_percent_average)
                 stocks_to_invest.append(stock_mix)
     print(stocks_to_invest)
-    return stocks_to_invest
+    return list(stocks_to_invest)
 
 
-def genrate_stock_data() -> None:
+def generate_stock_data() -> None:
     """Generates stock data classified into investment mixes"""
     investment_mixes = {}
     for mix_index in range(1, 20):
@@ -47,7 +48,7 @@ def genrate_stock_data() -> None:
         for stock_index in range(1, randint(3, 8)):
             stock = {}
             stock["name"] = f"Stock_{mix_index}_{stock_index}"
-            stock["value"] = randint(50, 1000)
+            stock["value"] = randint(100, 15000)
             stock["percentage"] = randint(-50, 100)/10
             investment_mix_stocks.append(stock)
             investment_mix["stocks"] = investment_mix_stocks
@@ -58,4 +59,5 @@ def genrate_stock_data() -> None:
 
 
 if __name__ == "__main__":
-    predict_potential_stock_mix(10)
+    generate_stock_data()
+    # predict_potential_stock_mix(10)
