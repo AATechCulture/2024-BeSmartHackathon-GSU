@@ -48,9 +48,7 @@ def get_potential_stock() -> str:
     # Get the amount of money left after all the expenses
     extra_money = 2*bank_data["salary"] - sum(bank_data.values())
     # send a post request to the stock data API
-    potential_mixes_to_invest = {
-        "potential_investments": predict_potential_stock_mix(extra_money)
-    }
+    potential_mixes_to_invest = predict_potential_stock_mix(extra_money)
 
     return jsonify(potential_mixes_to_invest)
 
